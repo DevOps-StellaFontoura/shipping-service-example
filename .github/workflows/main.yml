@@ -1,11 +1,16 @@
 name: Build Docker Image and upload to AWS
 
 on:
-  push:
-    branches:
-      - main
-      - staging
-      - development
+   push:
+     branches:
+       - main
+       - staging
+       - development
+   pull_request:
+     branches:
+       - main
+       - staging
+       - development
 jobs:
   build-docker:
     runs-on: ubuntu-latest
